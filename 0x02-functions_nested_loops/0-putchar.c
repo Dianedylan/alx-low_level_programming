@@ -2,9 +2,9 @@
 
 
 /**
- * main - Entry point
+ * main - prints "_putchar" followed by a new line.
  *
- * Return: nothing, return void
+ * Return: Always 0
  */
 
 int main(void)

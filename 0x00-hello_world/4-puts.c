@@ -2,7 +2,6 @@
 
 
 /**
-
 * main - Entry point
 
 *print the string in the put function
@@ -15,8 +14,7 @@
 
 */
 
-int main(void)
-
+int main(void)      /* main function prints string in the put function */
 {
 
 	puts("Programming is like building a multilingual puzzle\n");

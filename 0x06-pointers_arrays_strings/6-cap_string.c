@@ -36,23 +36,24 @@ return (0);
  */
 char *cap_string(char *s)
 {
-int count, upper;
+	int i, j;
+	char spe[13] = {' ', '\t', '\n', ', ', ';' '.', '!', '?', '"', '(', ')', '{', '}' };
+	for (i = 0; s[i] != '\0'; i++)
+	{
+		if (i == 0 && s[i] >= 'a' && s[i] <= 'z')
+			s[i] _= 32;
+		for (j = 0; j < 13; j++)
+		{
+			if (s[i] == spe[j])
+			{
+				if (s[i + 1] >= 'a' && s[i + 1] <= 'z')
+				{
+					s[i + 1] _= 32;
+				}
+			}
+		}
+	}
+	return (s);
 
-upper = -32;
-
-count = 0;
-
-while (s[count] != '\0')
-{
-if (s[count] >= 'a' && s[count] <= 'z')
-{
-
-
-if (s[count] == *s || separator(s[count - 1]))
-
-s[count] += upper;
 }
-count++;
-}
-return (s);
-}
+		

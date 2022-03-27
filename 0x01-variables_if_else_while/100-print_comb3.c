@@ -17,51 +17,44 @@
 int main(void)
 
 {
+int c;
 
-	int c;
-
-	int d = 0;
-
-
-
-	while (d < 10)
-
-	{
-
-		c = 0;
-
-		while (c < 10)
-
-		{
+int d = 0;
 
 
 
-			putchar('0' + d);
+while (d < 10)
 
-			putchar('0' + c);
+{
+
+c = 0;
+
+while (c < 10)
+
+{
 
 
 
-			if (c + d != 18)
+putchar('0' + d);
+putchar('0' + c);
 
-			{
+if (c + d != 19)
 
-				putchar(',');
+{
 
-				putchar(' ');
+putchar(',');
+putchar(' ');
+}
 
-			}
+c++;
 
-			c++;
+}
 
-		}
+d++;
 
-		d++;
+}
+putchar('\n');
 
-	}
-
-	putchar('\n');
-
-	return (0);
+return (0);
 
 }

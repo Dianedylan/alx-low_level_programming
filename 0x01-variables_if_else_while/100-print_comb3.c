@@ -17,7 +17,7 @@ int d;
 int c;
 for (d = 0; d <= 9; d++)
 {
-for (c= c + 1; c <= 9; c++)
+for (c = d + 1; c <= 9; c++)
 {
 
 putchar('0' + d);

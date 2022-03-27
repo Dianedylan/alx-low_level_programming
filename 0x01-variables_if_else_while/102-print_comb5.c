@@ -1,81 +1,50 @@
 #include <stdio.h>
-
-
-/*
-
- * Description: 
-
- * Return: 0
-
+/**
+* main - Entry point
+*
+* Return: Always 0 (success/correct)
 */
+int main(void)
 
 
 
-int main(){
+{
+int first_nums;
+int second_nums;
 
 
+for (first_nums = 0; first_nums < 100 ; first_nums++)
+{
+for (second_nums = first_nums + 1 ; second_nums < 100; second_nums++)
+{
 
-    int a = 0;
+putchar (first_nums / 10 + '0');
+putchar (first_nums % 10 + '0');
 
-    int b;
 
-    int c;
+putchar (' ');
 
-    while (a < 10)
+putchar (second_nums / 10 + '0');
+putchar (second_nums % 10 + '0');
 
-    {
 
-        b = 0;
+if (first_nums == 98 && second_nums == 99)
+{
+break;
+}
 
-        while (b < 10)
 
-        {
+putchar(',');
+putchar (' ');
 
-            c=0;
 
-            while (c < 10)
+}
 
-            {
+}
 
-                
+putchar('\n');
 
-                if (!(a==b || b==c || a==c) && (a < b && b < c))
 
-                {
+return (0);
 
-                    putchar('0' + a);
-
-                    putchar('0' + b);
-
-                    putchar('0' + c);
-
-                    if (!(a==7 && b==8 && c==9))
-
-                    {
-
-                        putchar(',');
-
-                        putchar(' ');
-
-                    }
-
-                }             
-
-                
-
-                c++;
-
-            }
-
-            b++;
-
-        }
-
-        a++;
-
-    }
-
-    
-
-    return (0);
 }

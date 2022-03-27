@@ -23,22 +23,22 @@ int d = 0;
 
 
 
-while (d < 10)
+while (d < 100)
 
 {
 
 c = 0;
 
-while (c < 10)
+while (c < 100)
 
 {
 
 
 
-putchar('0' + d);
-putchar('0' + c);
+putchar('0' + (d/10));
+putchar('0' + (c%10));
 
-if (c + d != 19)
+if (c + d != 99)
 
 {
 

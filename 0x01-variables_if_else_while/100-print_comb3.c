@@ -23,7 +23,7 @@ for (c = d + 1; c <= 9; c++)
 putchar('0' + d);
 putchar('0' + c);
 
-if (d < 9)
+if (d < 8)
 
 {
 

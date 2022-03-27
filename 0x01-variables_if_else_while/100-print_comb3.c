@@ -12,41 +12,25 @@
 int main(void)
 
 {
+int d;
+
 int c;
-
-int d = 0;
-
-
-
-while (d < 100)
-
+for (d = 0; d <= 9; d++)
+{
+for (c= c + 1; c <= 9; c++)
 {
 
-c = 0;
+putchar('0' + d);
+putchar('0' + c);
 
-while (c < 10)
-
-{
-
-
-
-putchar('0' + (d / 10));
-putchar('0' + (c % 10));
-
-if (c + d != 99)
+if (d < 9)
 
 {
 
 putchar(',');
 putchar(' ');
 }
-
-d++;
-
 }
-
-c++;
-
 }
 putchar('\n');
 

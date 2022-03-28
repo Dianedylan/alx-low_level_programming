@@ -5,7 +5,7 @@
 * @s: This is the main C string to be scanned.
 * @accept: This is the string containing the list of characters to match in s
 * Return: return count
-**/
+*/
 
 unsigned int _strspn(char *s, char *accept)
 
@@ -24,7 +24,7 @@ j = 0;
 while (str2[j] != '\0') /*Declaring WHILE *accept*/
 {
 if (str2[j] == str1[i]) /*Evaluate condition*/
-}
+{
 count++; /*count number*/
 break;
 }

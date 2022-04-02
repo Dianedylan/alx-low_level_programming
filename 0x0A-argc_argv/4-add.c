@@ -4,8 +4,8 @@
 #include <string.h>
 
 /**
-*check_num - check - string there are digit
-*@str: array str
+*check_num - checks string if there are digit
+*@str: array str to be checked
 *Return; Always 0 (Success)
 */
 

@@ -1,51 +1,46 @@
-nclude <stdio.h>
+#include <stdio.h>
 #include <stdlib.h>
-
 /**
- *  * main - function
- *   *@argc: length of argv
- *    *@argv: number of argument
- *     *Return: Always 0
- *      */
-
+* main - prints the minimum number of coins to make change for a given amount
+* @argc: arguement count
+* @argv: array of pointers to arguement strings
+* Return: number of coins or 1
+**/
 int main(int argc, char *argv[])
 {
-	/*Declaring variables*/
-	int position, total, change, aux;
-	int coins[] = {25, 10, 5, 2, 1}; /*Array int*/
+int amount, coins;
 
-	position = total = change = aux = 0;
-
-	if (argc != 2)
-	{
-		printf("Error\n");
-		return (1);
-	}
-
-	total = atoi(argv[1]); /*Covert str to int*/
-
-	if (total <= 0)
-	{
-		printf("0\n");
-		return (0);
-	}
-
-	/*Declaring While*/
-
-	while (coins[position] != '\0')
-
-	{
-		if (total >= coins[position])
-		{
-			aux = (total / coins[position]);
-			change += aux;
-			total -= coins[position] * aux;
-		}
-
-		position++;
-
-	}
-
-	printf("%d\n", change);
-	return (0);
+if (argc != 2)
+{
+printf("Error\n");
+return (1);
+}
+amount = atoi(argv[1]);
+coins = 0;
+if (amount > 25)
+{
+while (amount >= 25)
+amount -= 25, coins++;
+}
+if (amount > 10 && amount < 25)
+{
+while (amount >= 10)
+amount -= 10, coins++;
+}
+if (amount > 5 && amount < 10)
+{
+while (amount >= 5)
+amount -= 5, coins++;
+}
+if (amount > 2 && amount < 5)
+{
+while (amount >= 2)
+amount -= 2, coins++;
+}
+if (amount == 1 || amount == 2 || amount == 5 || amount == 10 || amount == 25)
+{
+coins++;
+}
+printf("%d\n", coins);
+return (0);
 }

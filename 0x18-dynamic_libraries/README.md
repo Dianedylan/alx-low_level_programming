@@ -1,1 +1,1 @@
-Static Libraries in C
+Dynamic Libraries in C

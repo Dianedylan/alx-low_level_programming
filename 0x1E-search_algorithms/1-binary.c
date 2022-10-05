@@ -8,14 +8,14 @@
 **/
 void pri_arr(int *array, size_t start, size_t end)
 {
-	unsigned int i;
+unsigned int i;
 
-	printf("Searching in array: ");
-	for (i = start; i < end; i++)
-	{
-		printf("%d, ", array[i]);
-	}
-	printf("%d\n", array[end]);
+printf("Searching in array: ");
+for (i = start; i < end; i++)
+{
+printf("%d, ", array[i]);
+}
+printf("%d\n", array[end]);
 }
 
 /**
